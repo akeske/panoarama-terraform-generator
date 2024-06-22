@@ -1,0 +1,6 @@
+{
+  "workbench.editor.enablePreviewFromQuickOpen": true,
+  "workbench.editor.enablePreviewFromCodeNavigation": true,
+  "workbench.editor.enablePreview": false,
+  "editor.suggest.preview": true
+}

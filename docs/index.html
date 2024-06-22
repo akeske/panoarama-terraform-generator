@@ -1,0 +1,128 @@
+<!DOCTYPE html><html class="default" lang="en"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>Palo Alto terraform generator based on CSV file</title><meta name="description" content="Documentation for Palo Alto terraform generator based on CSV file"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script defer src="assets/main.js"></script><script async src="assets/icons.js" id="tsd-icons-script"></script><script async src="assets/search.js" id="tsd-search-script"></script><script async src="assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><div class="table-cell" id="tsd-search" data-base="."><div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="assets/icons.svg#icon-search"></use></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div><div class="field"><div id="tsd-toolbar-links"></div></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">Palo Alto terraform generator based on CSV file</a></div><div class="table-cell" id="tsd-widgets"><a href="#" class="tsd-widget tsd-toolbar-icon menu no-caption" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="assets/icons.svg#icon-menu"></use></svg></a></div></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><h2>Palo Alto terraform generator based on CSV file</h2></div><div class="tsd-panel tsd-typography"><a id="md:paloalto-terraform-generator" class="tsd-anchor"></a><h1 class="tsd-anchor-link">PaloAlto-Terraform-Generator<a href="#md:paloalto-terraform-generator" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1><p>This TypeScript script automates the generation of Terraform files for Palo Alto Firewalls based on CSV files containing rules for each application.</p>
+<a id="md:table-of-contents" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Table of Contents<a href="#md:table-of-contents" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><ul>
+<li><a href="#md:introduction">Introduction</a></li>
+<li><a href="#md:how-to-run">How to Run</a></li>
+<li><a href="#md:useful-links">Useful Links</a></li>
+<li><a href="#md:palo-alto-commands">Palo Alto Commands</a></li>
+<li><a href="#md:csv-file-format">CSV File Format</a></li>
+</ul>
+<a id="md:introduction" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Introduction<a href="#md:introduction" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p>This project provides a script that simplifies the creation of Terraform configurations for managing Palo Alto Firewall rules. By utilizing CSV files that specify rules for various applications, users can quickly generate the necessary Terraform files for deployment.</p>
+<a id="md:how-to-run" class="tsd-anchor"></a><h2 class="tsd-anchor-link">How to Run<a href="#md:how-to-run" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><a id="md:to-install-dependencies-and-generate-terraform-files-use-the-following-commands" class="tsd-anchor"></a><h3 class="tsd-anchor-link">To install dependencies and generate Terraform files, use the following commands:<a href="#md:to-install-dependencies-and-generate-terraform-files-use-the-following-commands" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><pre><code class="sh"><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">install</span><br/><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">run</span><span class="hl-1"> </span><span class="hl-2">generate-terraform</span><span class="hl-1"> </span><span class="hl-3">--</span><span class="hl-1"> </span><span class="hl-2">useChatgpt=</span><span class="hl-3">false</span><span class="hl-1"> </span><span class="hl-2">env=d</span><span class="hl-1"> </span><span class="hl-2">position=top</span><span class="hl-1"> </span><span class="hl-2">deviceGroupName=cngfw-az-company-weu</span><span class="hl-1"> </span><span class="hl-2">applicationName=demo</span>
+</code><button type="button">Copy</button></pre>
+
+<a id="md:for-backing-up-panorama-configurations-use-the-provided-python-script" class="tsd-anchor"></a><h3 class="tsd-anchor-link">For backing up Panorama configurations, use the provided Python script:<a href="#md:for-backing-up-panorama-configurations-use-the-provided-python-script" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><pre><code class="sh"><span class="hl-0">python</span><span class="hl-1"> </span><span class="hl-2">panorama-backup.py</span><span class="hl-1"> </span><span class="hl-3">--ip</span><span class="hl-1"> </span><span class="hl-4">192.168.121.132</span><span class="hl-1"> </span><span class="hl-3">--username</span><span class="hl-1"> </span><span class="hl-2">admin</span><span class="hl-1"> </span><span class="hl-3">--password</span><span class="hl-1"> </span><span class="hl-4">1234</span>
+</code><button type="button">Copy</button></pre>
+
+<a id="md:to-generate-a-new-api-key-for-devops" class="tsd-anchor"></a><h3 class="tsd-anchor-link">To generate a new API key for devops<a href="#md:to-generate-a-new-api-key-for-devops" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><pre><code class="sh"><span class="hl-5">$password</span><span class="hl-1"> = </span><span class="hl-2">&quot;password&quot;</span><br/><span class="hl-0">curl.exe</span><span class="hl-1"> </span><span class="hl-3">-k</span><span class="hl-1"> </span><span class="hl-2">&quot;https://192.168.121.132/api/?type=keygen&amp;user=admin&amp;password=</span><span class="hl-5">$password</span><span class="hl-2">&quot;</span>
+</code><button type="button">Copy</button></pre>
+
+<a id="md:useful-links" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Useful Links<a href="#md:useful-links" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><ul>
+<li><a href="https://live.paloaltonetworks.com/t5/customer-resources/support-pan-os-software-release-guidance/ta-p/258304">Support PAN-OS Software Release Guidance</a></li>
+<li><a href="https://docs.paloaltonetworks.com/pan-os/9-1/pan-os-web-interface-help/objects/objects-applications/applications-overview">Applications Overview</a></li>
+<li><a href="https://knowledgebase.paloaltonetworks.com/KCSArticleDetail?id=kA10g000000Cm1aCAC">How to Prevent Application Shift</a></li>
+<li><a href="https://knowledgebase.paloaltonetworks.com/KCSArticleDetail?id=kA10g000000ClVHCA0">Packet Flow Sequence in PAN-OS</a></li>
+<li><a href="https://knowledgebase.paloaltonetworks.com/KCSArticleDetail?id=kA10g000000ClFGCA0">How to Use Certificate for Secure Web-GUI Access</a></li>
+<li><a href="https://learn.microsoft.com/en-us/entra/identity/saas-apps/paloaltoadmin-tutorial">Microsoft Entra SSO Integration with Palo Alto Networks - Admin UI</a> (<a href="https://www.youtube.com/watch?v=68_AwopgD-Q">Video Tutorial</a>)</li>
+<li><a href="https://knowledgebase.paloaltonetworks.com/KCSArticleDetail?id=kA10g000000PNqwCAG&amp;lang=en_US">Commit Issues from Panorama Due to New URL Filtering Categories</a></li>
+<li><a href="https://www.niap-ccevs.org/MMO/Product/st_vid11285-agd3.pdf">API Calls Documentation</a></li>
+<li><a href="https://learn.microsoft.com/en-us/entra/identity/saas-apps/paloaltonetworks-captiveportal-tutorial">Palo Alto SSO with Azure EntraID</a></li>
+<li><a href="https://learn.microsoft.com/en-us/entra/identity/authentication/howto-mfa-nps-extension">NPS Extension for Multi-Factor Authentication</a></li>
+<li><a href="https://docs.paloaltonetworks.com/pan-os/11-0/pan-os-admin/user-id/map-ip-addresses-to-users/configure-user-mapping-for-terminal-server-users/configure-the-palo-alto-networks-terminal-services-agent-for-user-mapping">TS Agent Configuration</a></li>
+<li><a href="https://docs.paloaltonetworks.com/pan-os/9-1/pan-os-admin/firewall-administration/reference-port-number-usage/ports-used-for-panorama">Ports Used for Panorama</a></li>
+</ul>
+<a id="md:palo-alto-commands" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Palo Alto Commands<a href="#md:palo-alto-commands" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p>To configure Palo Alto Firewall, use the following commands:</p>
+<pre><code class="sh"><span class="hl-0">set</span><span class="hl-1"> </span><span class="hl-2">deviceconfig</span><span class="hl-1"> </span><span class="hl-2">system</span><span class="hl-1"> </span><span class="hl-2">ip-address</span><span class="hl-1"> </span><span class="hl-4">192.168.233.10</span><span class="hl-1"> </span><span class="hl-2">netmask</span><span class="hl-1"> </span><span class="hl-4">255.255.255.0</span><span class="hl-1"> </span><span class="hl-2">default-gateway</span><span class="hl-1"> </span><span class="hl-4">192.168.233.0</span><span class="hl-1"> </span><span class="hl-2">dns-setting</span><span class="hl-1"> </span><span class="hl-2">servers</span><span class="hl-1"> </span><span class="hl-2">primary</span><span class="hl-1"> </span><span class="hl-4">8.8.8.8</span>
+</code><button type="button">Copy</button></pre>
+
+<p>Some usefull comannds</p>
+<pre><code class="sh"><span class="hl-0">debug</span><span class="hl-1"> </span><span class="hl-2">system</span><span class="hl-1"> </span><span class="hl-2">maintenance-mode</span><br/><span class="hl-0">show</span><span class="hl-1"> </span><span class="hl-2">interface</span><span class="hl-1"> </span><span class="hl-2">management</span><br/><br/><span class="hl-0">request</span><span class="hl-1"> </span><span class="hl-2">bootstrap</span><span class="hl-1"> </span><span class="hl-2">vm-auth-key</span><span class="hl-1"> </span><span class="hl-2">show</span><br/><br/><span class="hl-0">less</span><span class="hl-1"> </span><span class="hl-2">mp-log</span><span class="hl-1"> </span><span class="hl-2">configd.log</span><br/><span class="hl-0">grep</span><span class="hl-1"> </span><span class="hl-2">mp-log</span><span class="hl-1"> </span><span class="hl-2">configd.log</span><span class="hl-1"> </span><span class="hl-2">pattern</span><span class="hl-1"> </span><span class="hl-2">Error</span><br/>
+</code><button type="button">Copy</button></pre>
+
+<a id="md:csv-file-format" class="tsd-anchor"></a><h2 class="tsd-anchor-link">CSV File Format<a href="#md:csv-file-format" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p>CSV files containing firewall rules should be placed inside the <code>data</code> folder. Each CSV file corresponds to a specific application. Below is the required format for the CSV files:</p>
+<table>
+<thead>
+<tr>
+<th>Column Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Firewall</td>
+<td>az-company-we, az-company-ne</td>
+</tr>
+<tr>
+<td>Application</td>
+<td>Application name, such as Cyberark</td>
+</tr>
+<tr>
+<td>Environment</td>
+<td>Environment (prod, dev, stage, baseline)</td>
+</tr>
+<tr>
+<td>Vendor</td>
+<td>The responsible vendor</td>
+</tr>
+<tr>
+<td>RuleName</td>
+<td>The rule name, e.g., 'Allow DNS'</td>
+</tr>
+<tr>
+<td>SourceGroupName</td>
+<td>Address group object name based on this value</td>
+</tr>
+<tr>
+<td>Source</td>
+<td>List of IPs</td>
+</tr>
+<tr>
+<td>DestinationType</td>
+<td>Type of destination (Service, URL)</td>
+</tr>
+<tr>
+<td>DestinationGroupName</td>
+<td>Address group object name based on this value</td>
+</tr>
+<tr>
+<td>Destination</td>
+<td>List of IPs</td>
+</tr>
+<tr>
+<td>Services</td>
+<td>Service port or application name, comma-separated. If you use ! as first char for a service then it will not try to convert it to application. For eaxmple if use use port 53 then it will convert it to dns application, else if you write !53 then it will create src-dns-tcp service object</td>
+</tr>
+<tr>
+<td>Direction</td>
+<td>Inbound, Outbound, or Internal (default)</td>
+</tr>
+<tr>
+<td>Action</td>
+<td>Allow or Deny</td>
+</tr>
+<tr>
+<td>Tags</td>
+<td>Tag list with comma as delimiter</td>
+</tr>
+<tr>
+<td>BusinessPurpose</td>
+<td>Information about the rule</td>
+</tr>
+<tr>
+<td>Comment</td>
+<td>Administrator comments for this rule</td>
+</tr>
+<tr>
+<td>Protocol</td>
+<td>Layer 4 protocol (TCP or UDP). If you want icmp then use icmp,ping as applications</td>
+</tr>
+<tr>
+<td>Log</td>
+<td>True or False for logging on Panorama-log</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>Enabled or Disabled</td>
+</tr>
+</tbody>
+</table>
+</div></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-accordion"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="assets/icons.svg#icon-chevronDown"></use></svg>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></div><div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="assets/icons.svg#icon-chevronDown"></use></svg>On This Page</h3></summary><div class="tsd-accordion-details"><a href="#md:paloalto-terraform-generator"><span>Palo<wbr/>Alto-<wbr/>Terraform-<wbr/>Generator</span></a><ul><li><a href="#md:table-of-contents"><span>Table of <wbr/>Contents</span></a></li><li><a href="#md:introduction"><span>Introduction</span></a></li><li><a href="#md:how-to-run"><span>How to <wbr/>Run</span></a></li><li><ul><li><a href="#md:to-install-dependencies-and-generate-terraform-files-use-the-following-commands"><span>To install dependencies and generate <wbr/>Terraform files, use the following commands:</span></a></li><li><a href="#md:for-backing-up-panorama-configurations-use-the-provided-python-script"><span>For backing up <wbr/>Panorama configurations, use the provided <wbr/>Python script:</span></a></li><li><a href="#md:to-generate-a-new-api-key-for-devops"><span>To generate a new API key for devops</span></a></li></ul></li><li><a href="#md:useful-links"><span>Useful <wbr/>Links</span></a></li><li><a href="#md:palo-alto-commands"><span>Palo <wbr/>Alto <wbr/>Commands</span></a></li><li><a href="#md:csv-file-format"><span>CSV <wbr/>File <wbr/>Format</span></a></li></ul></div></details></div><div class="site-menu"><nav class="tsd-navigation"><a href="index.html" class="current"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="assets/icons.svg#icon-1"></use></svg><span>Palo Alto terraform generator based on CSV file</span></a><ul class="tsd-small-nested-navigation" id="tsd-nav-container" data-base="."><li>Loading...</li></ul></nav></div></div></div><footer><p class="tsd-generator">Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></footer><div class="overlay"></div></body></html>

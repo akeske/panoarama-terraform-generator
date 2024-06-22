@@ -1,0 +1,51 @@
+trigger:
+  - none
+
+pool: Palo Alto Deployment Agent
+
+steps:
+  - task: TerraformTaskV4@4
+    displayName: Terraform init
+    inputs:
+      workingDirectory: "$(System.DefaultWorkingDirectory)/Default-PA-profiles"
+      command: "init"
+      backendAzureRmResourceGroupName: "rg-paloalto"
+      backendAzureRmStorageAccountName: "stpaloaltoprdweu"
+      backendServiceArm: "PaloAltoSPN"
+      backendAzureRmContainerName: "company"
+      backendAzureRmKey: "company.tfstate"
+    env:
+      TF_VAR_api_key: $(API_KEY)
+      TF_VAR_storage_key: $(STORAGE_KEY)
+
+  - task: TerraformTaskV4@4
+    displayName: Terraform validate
+    inputs:
+      workingDirectory: "$(System.DefaultWorkingDirectory)/Default-PA-profiles"
+      command: "validate"
+    env:
+      TF_VAR_api_key: $(API_KEY)
+      TF_VAR_storage_key: $(STORAGE_KEY)
+
+  - task: TerraformTaskV4@4
+    displayName: Terraform plan
+    inputs:
+      workingDirectory: "$(System.DefaultWorkingDirectory)/Default-PA-profiles"
+      command: "plan"
+      provider: "azurerm"
+      environmentServiceNameAzureRM: "PaloAltoSPN"
+    env:
+      TF_VAR_api_key: $(API_KEY)
+      TF_VAR_storage_key: $(STORAGE_KEY)
+
+  - task: TerraformTaskV4@4
+    displayName: Terraform apply
+    inputs:
+      workingDirectory: "$(System.DefaultWorkingDirectory)/Default-PA-profiles"
+      command: "apply"
+      provider: "azurerm"
+      environmentServiceNameAzureRM: "PaloAltoSPN"
+      commandOptions: "-auto-approve -parallelism=1"
+    env:
+      TF_VAR_api_key: $(API_KEY)
+      TF_VAR_storage_key: $(STORAGE_KEY)

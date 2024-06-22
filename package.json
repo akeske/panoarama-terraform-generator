@@ -1,0 +1,27 @@
+{
+  "name": "paloalto-terraform-generator",
+  "version": "1.13.1",
+  "description": "Generate terraform scripts per Applicationn for palo alto ngfw",
+  "scripts": {
+    "generate-terraform": "ts-node src/index.ts",
+    "build": "tsc",
+    "doc": "npx typedoc --options typedoc.json"
+  },
+  "author": "Thanos Keskempes",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "crypto-js": "^4.2.0",
+    "csv-parse": "^5.5.6",
+    "lodash": "^4.17.21",
+    "openai": "^4.52.0"
+  },
+  "devDependencies": {
+    "@types/crypto-js": "^4.2.2",
+    "@types/node": "^20.14.8",
+    "fs": "^0.0.1-security",
+    "ts-node": "^10.9.2",
+    "typedoc": "^0.26.0",
+    "typescript": "^5.5.2"
+  }
+}

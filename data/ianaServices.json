@@ -1,0 +1,547 @@
+[
+  {
+    "name": "ftp-20",
+    "port": "20",
+    "description": "File Transfer Protocol (FTP)"
+  },
+  {
+    "name": "ftp-21",
+    "port": "21",
+    "description": "File Transfer Protocol (FTP)"
+  },
+  {
+    "name": "ssh",
+    "port": "22",
+    "description": "Secure Shell (SSH)"
+  },
+  {
+    "name": "telnet",
+    "port": "23",
+    "description": "Telnet protocol"
+  },
+  {
+    "name": "smtp",
+    "port": "25",
+    "description": "Simple Mail Transfer Protocol (SMTP)"
+  },
+  {
+    "name": "dns",
+    "port": "53",
+    "description": "Domain Name System (DNS)"
+  },
+  {
+    "name": "bootps",
+    "port": "67",
+    "description": "Bootstrap Protocol Server"
+  },
+  {
+    "name": "bootpc",
+    "port": "68",
+    "description": "Bootstrap Protocol Client"
+  },
+  {
+    "name": "tftp",
+    "port": "69",
+    "description": "Trivial File Transfer"
+  },
+  {
+    "name": "http",
+    "port": "80",
+    "description": "Hypertext Transfer Protocol (HTTP)"
+  },
+  {
+    "name": "kerberos",
+    "port": "88",
+    "description": "Kerberos"
+  },
+  {
+    "name": "pop3",
+    "port": "110",
+    "description": "Post Office Protocol version 3 (POP3)"
+  },
+  {
+    "name": "ntp",
+    "port": "123",
+    "description": "Network Time Protocol (NTP)"
+  },
+  {
+    "name": "rpc",
+    "port": "135",
+    "description": "Remote Procedure Call (RPC)"
+  },
+  {
+    "name": "netbios",
+    "port": "137",
+    "description": "NetBIOS Name Service"
+  },
+  {
+    "name": "netbios",
+    "port": "139",
+    "description": "NetBIOS Session Service"
+  },
+  {
+    "name": "imap",
+    "port": "143",
+    "description": "Internet Message Access Protocol (IMAP)"
+  },
+  {
+    "name": "snmp",
+    "port": "161",
+    "description": "Simple Network Management Protocol (SNMP)"
+  },
+  {
+    "name": "bgp",
+    "port": "179",
+    "description": "Border Gateway Protocol"
+  },
+  {
+    "name": "irc",
+    "port": "194",
+    "description": "Internet Relay Chat Protocol"
+  },
+  {
+    "name": "ldap",
+    "port": "389",
+    "description": "Lightweight Directory Access Protocol"
+  },
+  {
+    "name": "https",
+    "port": "443",
+    "description": "Hypertext Transfer Protocol Secure (HTTPS)"
+  },
+  {
+    "name": "smb",
+    "port": "445",
+    "description": "Server Message Block (SMB)"
+  },
+  {
+    "name": "smtps",
+    "port": "465",
+    "description": "SMTP over SSL/TLS"
+  },
+  {
+    "name": "syslog",
+    "port": "514",
+    "description": "Syslog"
+  },
+  {
+    "name": "lpd-lpr",
+    "port": "515",
+    "description": "The Line Printer Daemon protocol/Line Printer Remote protocol (or LPD, LPR) is a network printing protocol for submitting print jobs to a remote printer."
+  },
+  {
+    "name": "rtsp",
+    "port": "554",
+    "description": ""
+  },
+  {
+    "name": "smtps",
+    "port": "587",
+    "description": "Email Submission"
+  },
+  {
+    "name": "ldaps",
+    "port": "636",
+    "description": "LDAP protocol over TLS/SSL"
+  },
+  {
+    "name": "netconf-ssh",
+    "port": "830",
+    "description": "NETCONF over SSH"
+  },
+  {
+    "name": "netconf-beep",
+    "port": "831",
+    "description": "NETCONF over BEEP"
+  },
+  {
+    "name": "netconf-soap-http",
+    "port": "832",
+    "description": "NETCONF for SOAP over HTTPS"
+  },
+  {
+    "name": "netconf-soap-beep",
+    "port": "833",
+    "description": "NETCONF for SOAP over BEEP"
+  },
+  {
+    "name": "rsync",
+    "port": "873",
+    "description": ""
+  },
+  {
+    "name": "ftps-909",
+    "port": "989",
+    "description": "ftp protocol, data, over TLS/SSL"
+  },
+  {
+    "name": "ftps-990",
+    "port": "990",
+    "description": "ftp protocol, control, over TLS/SSL"
+  },
+  {
+    "name": "imaps",
+    "port": "993",
+    "description": "IMAP over SSL/TLS"
+  },
+  {
+    "name": "pop3s",
+    "port": "995",
+    "description": "POP3 over SSL/TLS"
+  },
+  {
+    "name": "nfs-network-file-system",
+    "port": "1025",
+    "description": ""
+  },
+  {
+    "name": "socks-proxy",
+    "port": "1080",
+    "description": "Socks"
+  },
+  {
+    "name": "openvpn",
+    "port": "1194",
+    "description": "OpenVPN"
+  },
+  {
+    "name": "microsoft-sql-server",
+    "port": "1433",
+    "description": "Microsoft SQL Server"
+  },
+  {
+    "name": "microsoft-sql-monitor",
+    "port": "1434",
+    "description": "Microsoft SQL Server"
+  },
+  {
+    "name": "oracle",
+    "port": "1521",
+    "description": "Oracle Database"
+  },
+  {
+    "name": "h.323",
+    "port": "1720",
+    "description": ""
+  },
+  {
+    "name": "pptp",
+    "port": "1723",
+    "description": "Point-to-Point Tunneling Protocol"
+  },
+  {
+    "name": "radius-authentication",
+    "port": "1812",
+    "description": "RADIUS"
+  },
+  {
+    "name": "radius-accounting",
+    "port": "1813",
+    "description": "RADIUS"
+  },
+  {
+    "name": "mqtt",
+    "port": "1883",
+    "description": "Message Queuing Telemetry Transport Protocol"
+  },
+  {
+    "name": "nfs",
+    "port": "2049",
+    "description": "Network File System (NFS)"
+  },
+  {
+    "name": "zookeeper",
+    "port": "2181",
+    "description": "Apache Zookeeper"
+  },
+  {
+    "name": "docker-http",
+    "port": "2375",
+    "description": "Docker"
+  },
+  {
+    "name": "docker-https",
+    "port": "2376",
+    "description": "Docker"
+  },
+  {
+    "name": "zookeeper",
+    "port": "2888",
+    "description": "Apache Zookeeper"
+  },
+  {
+    "name": "grafana",
+    "port": "3000",
+    "description": "Grafana"
+  },
+  {
+    "name": "msftgc",
+    "port": "3268",
+    "description": "Microsoft Global Catalog"
+  },
+  {
+    "name": "msftgcssl",
+    "port": "3269",
+    "description": "Microsoft Global Catalog with LDAP/SSL"
+  },
+  {
+    "name": "mysql",
+    "port": "3306",
+    "description": "MySQL Database"
+  },
+  {
+    "name": "ms-rdp",
+    "port": "3389",
+    "description": "Remote Desktop Protocol (RDP)"
+  },
+  {
+    "name": "spark-web-ui",
+    "port": "4040",
+    "description": "Apache Spark"
+  },
+  {
+    "name": "pcep",
+    "port": "4189",
+    "description": "Path Computation Element Communication Protocol"
+  },
+  {
+    "name": "erlang-port-mapper-daemon-epmd",
+    "port": "4369",
+    "description": ""
+  },
+  {
+    "name": "metasploit",
+    "port": "4444",
+    "description": ""
+  },
+  {
+    "name": "ipsec-nat-traversal",
+    "port": "4500",
+    "description": ""
+  },
+  {
+    "name": "upnp",
+    "port": "5000",
+    "description": ""
+  },
+  {
+    "name": "logstash",
+    "port": "5044",
+    "description": "Logstash"
+  },
+  {
+    "name": "postgresql",
+    "port": "5432",
+    "description": "PostgreSQL Database"
+  },
+  {
+    "name": "kibana",
+    "port": "5601",
+    "description": "Kibana"
+  },
+  {
+    "name": "symantec-cssc",
+    "port": "5637",
+    "description": "Symantec CSSC"
+  },
+  {
+    "name": "amqp-tls-rabbitmq",
+    "port": "5671",
+    "description": "Advanced Message Queuing Protocol (AMQP)"
+  },
+  {
+    "name": "amqp",
+    "port": "5672",
+    "description": "Advanced Message Queuing Protocol (AMQP)"
+  },
+  {
+    "name": "vnc",
+    "port": "5900",
+    "description": "Virtual Network Computing (VNC)"
+  },
+  {
+    "name": "couchdb",
+    "port": "5984",
+    "description": "CouchDB"
+  },
+  {
+    "name": "varnish",
+    "port": "6082",
+    "description": ""
+  },
+  {
+    "name": "redis",
+    "port": "6379",
+    "description": "Redis Database"
+  },
+  {
+    "name": "kubernetes-api-server",
+    "port": "6443",
+    "description": "Service Registry Default HTTPS Domain"
+  },
+  {
+    "name": "syslog-tls",
+    "port": "6514",
+    "description": "Syslog over TLS"
+  },
+  {
+    "name": "elipse-rpc",
+    "port": "6515",
+    "description": ""
+  },
+  {
+    "name": "irc-internet-relay-chat",
+    "port": "6667",
+    "description": ""
+  },
+  {
+    "name": "weblogic",
+    "port": "7001",
+    "description": ""
+  },
+  {
+    "name": "apache-spark",
+    "port": "7077",
+    "description": "Apache Spark"
+  },
+  {
+    "name": "fse",
+    "port": "7394",
+    "description": "File system export of backup images"
+  },
+  {
+    "name": "influxdb",
+    "port": "8086",
+    "description": ""
+  },
+  {
+    "name": "hadoop-yarn-resourcemanager",
+    "port": "8088",
+    "description": ""
+  },
+  {
+    "name": "splunk",
+    "port": "8089",
+    "description": ""
+  },
+  {
+    "name": "puppet-master",
+    "port": "8140",
+    "description": ""
+  },
+  {
+    "name": "vault-by-hashicorp",
+    "port": "8200",
+    "description": ""
+  },
+  {
+    "name": "consul",
+    "port": "8500",
+    "description": ""
+  },
+  {
+    "name": "mqtt-tls",
+    "port": "8883",
+    "description": ""
+  },
+  {
+    "name": "elasticsearch-9200",
+    "port": "9200",
+    "description": "Elasticsearch"
+  },
+  {
+    "name": "elasticsearch-9207",
+    "port": "9207",
+    "description": "Elasticsearch"
+  },
+  {
+    "name": "elasticsearch-9300",
+    "port": "9300",
+    "description": "Elasticsearch"
+  },
+  {
+    "name": "mysql-5306",
+    "port": "9306",
+    "description": ""
+  },
+  {
+    "name": "mysql-5307",
+    "port": "9307",
+    "description": ""
+  },
+  {
+    "name": "git-9418",
+    "port": "9418",
+    "description": "Git"
+  },
+  {
+    "name": "git-9419",
+    "port": "9419",
+    "description": "Git"
+  },
+  {
+    "name": "memcached",
+    "port": "11214",
+    "description": "Memcached"
+  },
+  {
+    "name": "veritas-net-util",
+    "port": "13724",
+    "description": "Veritas Network Utility"
+  },
+  {
+    "name": "veritas-net-backup",
+    "port": "13782",
+    "description": "Veritas NetBackup"
+  },
+  {
+    "name": "rabbitmq-management-15670",
+    "port": "15670",
+    "description": "RabbitMQ Management"
+  },
+  {
+    "name": "rabbitmq-management-15671",
+    "port": "15671",
+    "description": "RabbitMQ Management"
+  },
+  {
+    "name": "rabbitmq management-15672",
+    "port": "15672",
+    "description": "RabbitMQ Management"
+  },
+  {
+    "name": "rabbitmq-management-15675",
+    "port": "15675",
+    "description": "RabbitMQ Management"
+  },
+  {
+    "name": "sworion",
+    "port": "17777",
+    "description": "SolarWinds Orion"
+  },
+  {
+    "name": "easyengine",
+    "port": "22222",
+    "description": "EasyEngine is CLI tool to manage WordPress Sites on Nginx server"
+  },
+  {
+    "name": "glusterfs",
+    "port": "24007",
+    "description": ""
+  },
+  {
+    "name": "mongodb",
+    "port": "27017",
+    "description": "MongoDB Database"
+  },
+  {
+    "name": "hadoop-hdfs-namenode",
+    "port": "50070",
+    "description": ""
+  },
+  {
+    "name": "hadoop-hdfs-datanode",
+    "port": "50075",
+    "description": ""
+  }
+]

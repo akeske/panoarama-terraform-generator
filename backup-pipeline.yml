@@ -1,0 +1,46 @@
+trigger:
+  - none
+
+# schedules:
+# - cron: "0 0 * * *"
+#   displayName: "Daily midnight export"
+#   branches:
+#     include:
+#     - main
+#   always: true
+
+pool: Palo Alto Deployment Agent
+
+variables:
+  currentDate: $[ format('{0:yyyy}.{0:MM}.{0:dd}', pipeline.startTime) ]
+
+steps:
+  - script: |
+      dir
+      cd backup
+      sudo apt install python3-pip -y
+      pip3 install -r requirements.txt
+    displayName: "Install dependencies"
+
+  - script: |
+      cd backup
+      python3 panorama_backup.py --ip $PanoramaIP --username $PanoramaUsername --password $PanoramaPassword
+    displayName: "Run backup script"
+    env:
+      PanoramaIP: $(PANORAMA_IP)
+      PanoramaUsername: $(PANORAMA_USERNAME)
+      PanoramaPassword: $(PANORAMA_PASSWORD)
+
+  - task: CmdLine@2
+    displayName: Push backup config file from Palo Alto
+    inputs:
+      script: |
+        git config user.email "daily-backup@local"
+        git config user.name "Panorama Backup"
+
+        git add backup/panorama_config_backup.xml
+
+        git commit -m "Panorama daily backup $(currentDate)"
+        git push -f https://$AccessToken@dev.azure.com/companysa/Security%20CI-CD/_git/Panorama HEAD:main
+    env:
+      AccessToken: $(PAT)

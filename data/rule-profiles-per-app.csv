@@ -1,0 +1,5 @@
+entity;name;applications;direction
+virus;Az-<region>-Antivirus-Profile;web-browsing,smtp-base,ms-ds-smb,ms-ds-smbv3,ssl;inbound
+spyware;Az-<region>-Anti-Spyware-Profile;dns-base,web-browsing,ssl,smtp-base,*;versa
+vulnerability;Az-<region>-Vulnerability-Porfile;ssh,ms-rdp,smtp-base,oracle,mssql-db,mysql,postgres,mongodb-base;versa
+urlFiltering;Az-<region>-URL-Filtering-Profile;web-browsing,ssl,443,*;outbound

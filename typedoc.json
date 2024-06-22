@@ -1,0 +1,5 @@
+{
+  "name": "Palo Alto terraform generator based on CSV file",
+  "entryPoints": ["src/*.ts", "src/generate/*.ts"],
+  "out": "docs"
+}

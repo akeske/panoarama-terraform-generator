@@ -1,0 +1,15 @@
+﻿Firewall;Application;Environment;Vendor;RuleName;SourceGroupName;Source;DestinationType;DestinationGroupName;Destination;Services;Direction;Action;Tags;BusinessPurpose;Comment;Protocol;Log;Status
+cngfw-az-company-weu;demo;Stage;demo;a1;group1;10.0.0.0/8,172.18.1.0/24;Service;pc1;;443;Internal;Allow;;;;TCP;TRUE;Enabled
+cngfw-az-company-weu;demo;Stage;demo;a2;snet1;;Service;pc1;;443;Internal;Allow;;;;TCP;TRUE;Enabled
+cngfw-az-company-weu;demo;Prod;demo;a3;group2;172.18.2.0/24,10.0.0.0/8,172.18.1.0/24;Service;;172.18.1.3,172.18.122.6;443;Internal;Allow;;;;TCP;TRUE;Enabled
+cngfw-az-company-weu;demo;Prod;demo;a4;group2;172.18.2.0/24,10.0.0.0/8,172.18.1.0/24;Service;pc2;172.18.1.4;443;Internal;Allow;;;;TCP;TRUE;Enabled
+cngfw-az-company-weu;demo;Prod;demo;a5;group2;172.18.2.0/24,10.0.0.0/8,172.18.1.0/24;Service;pc1,pc2;;443;Internal;Allow;;;;TCP;TRUE;Enabled
+cngfw-az-company-weu;demo;Stage;demo;a6;snet1;10.0.0.0/10;Service;pc1;172.18.122.6;443;Internal;Allow;;;;TCP;TRUE;Enabled
+cngfw-az-company-weu;demo;Stage;demo;a7;group3;10.0.0.0/16,172.18.2.0/24;Service;pc1;;443;Internal;Allow;;;;TCP;TRUE;Enabled
+cngfw-az-company-weu;demo;Stage;demo;a8;;10.0.0.0/16;Service;pc1;;443;Internal;Allow;;;;TCP;TRUE;Enabled
+cngfw-az-company-weu;demo;Stage;demo;a9;group2,group3;;Service;pc1;172.18.122.6;443;Internal;Allow;;;;TCP;TRUE;Enabled
+cngfw-az-company-weu;demo;Stage;demo;a10;group3;;Service;aaaaaaa;172.18.122.6;443;Internal;Allow;;will convert to address to pc1;;TCP;TRUE;Enabled
+cngfw-az-company-weu;demo;Stage;demo;a11;group3;172.18.2.0/24,10.0.0.0/16;Service;pc1;172.18.122.6;!53,!3389;Internal;Allow;;;;TCP;TRUE;Enabled
+cngfw-az-company-weu;demo;Stage;demo;a12;group3;172.18.2.0/24,10.0.0.0/16;Service;pc1;172.18.122.6;445;Internal;Allow;;;;TCP;TRUE;Enabled
+cngfw-az-company-weu;demo;Stage;demo;a13;;172.18.2.5-172.18.2.10;Service;pc1;172.18.122.6;123;Internal;Allow;;;;TCP;TRUE;Enabled
+cngfw-az-company-weu;demo;Stage;demo;a14;addr;172.18.2.5;Service;pc1;172.18.122.6;"123";Internal;Allow;;;;TCP;TRUE;Enabled
